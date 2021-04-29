@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+</head>
+<body>
+    <form action="/home/yashasv/Documents/Server">
+        <h1>Sign Up</h1>
+        <h3> <a href="index.html">Home</a></h3>
+        <h4>Name <input type="text" name ="name" required></h4> <br>
+        <h4>Password <input type="password" required></h4> <br>
+        
+        <legend>Gender</legend>
+        <fieldset><h4> Male <input type="radio" name="gender" id="male" required> <br>
+             Female <input type="radio" name="gender" id="Female" required>
+        </h4></fieldset>
+        <legend>Educational Background</legend><fieldset> <h4>
+            12th passed <input type="checkbox" name="education" id="education">
+            11th <input type="checkbox" name="education" id="education">
+            12th <input type="checkbox" name="education" id="education">
+
+        </h4> </fieldset> <br>
+        <p>Address <textarea name="address" id="useraddress" cols="100" rows="10"></textarea></p>
+        <p>Mobile Number: <input type="number" name="mobile" id="mobile" required></p>
+        <h4>Upload a Profile Picture<input type="image" name="userpic" id="userpic"></h4> <br>
+        <h4>Your Email ID<input type="email" name="email" id="emailid" required></h4> <br>
+    
+
+        <hr>
+
+        <h2>Payment Information</h2>
+        <p>Card type: <select name="card_type" id="card_type" required>
+            <option value="">--Select a Card Type--</option>
+            <option value="mastercard">MasterCard</option>
+            <option value="visa">VISA</option>
+            <option value="rupay">RuPay</option>
+            <option value="chindi">Action Kaamen Gold Premium Card</option>
+        </select></p>
+
+        <p>Card Number: <input type="number" name="cardnum" id="cardnum" required></p>
+        <p>Card Expiration: <input type="date" name="exp_date" id="exp_date" required></p>
+        <p>CVV: <input type="password" name="cvv" id="cvv" required></p>
+        <input type="submit" value="Submit">
+    </form>
+    
+</body>
+</html>
