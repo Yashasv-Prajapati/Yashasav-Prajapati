@@ -85,6 +85,7 @@ body{
 
 .latest_videos iframe{
     height: 300px;
+    border-radius: 10px;
 }
 
 .section{
@@ -325,4 +326,22 @@ footer a{
     font-family: 'Montserrat', sans-serif;
     font-size: 25px;
     color: rgb(0, 255, 55);
+
+
+}
+
+.contact-images{
+    height: 14vh;
+    width: auto;
+    margin:0px;
+    padding-top: 3vh;
+
+}
+
+.contact-images-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+
 }
