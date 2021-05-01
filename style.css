@@ -31,7 +31,8 @@ nav {
     background-color: #3f52e3;
     overflow: hidden;
     padding: none;
-    border-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
     margin-top: 0px;
     border-spacing: 0mm;
     
@@ -320,11 +321,13 @@ header span:hover::after{
 
 footer{
     background-color: black;
-    padding: 10px;
-    height:400px;
+    padding: 2vh;
+    height:auto;
     width: auto;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    display: flex;
+    flex-direction: column;
 }
 footer a{
     color: white;
@@ -378,14 +381,12 @@ footer a{
         .latest_videos{
             height:360px;
             display: inline-table;
-            border: 1px solid white;
             margin-bottom: 1vh;
             margin-top:1vh;
 
         }
         
         .latest_videos iframe{
-            border: 1px solid white;
             padding:0.5vh;
 
         }
@@ -470,6 +471,29 @@ footer a{
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
 
+@media only screen and (max-width: 768px){
+    .contact-images-container{
+        display:flex;
+        flex-direction: row;
+        width: 100%;
+    }
 
+    .contact-images-parent-container{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .contact-images{
+        height: 11vh;
+        margin:auto;
+        padding: none;
+    }
+
+    .contact-content{
+        font-size:1.4em;
+    
+    
+    }
 }
