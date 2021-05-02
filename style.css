@@ -7,6 +7,11 @@
 
 html{
     scroll-behavior: smooth;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x:hidden;
 }
 
 *{
@@ -321,7 +326,7 @@ header span:hover::after{
 
 footer{
     background-color: black;
-    padding: 2vh;
+    padding: 4vh;
     height:auto;
     width: auto;
     border-top-left-radius: 10px;
@@ -332,6 +337,7 @@ footer{
 footer a{
     color: white;
     word-spacing: 10px;
+    padding: 1vh;
     text-decoration: none;
 }
 
@@ -355,9 +361,7 @@ footer a{
             margin-left: auto;
             margin-right:auto;
             padding-bottom: 20px;
-            border:rgb(104, 99, 94);
-            transition: transform 0.5s ease;
-            
+           
         }
         .quote{
             margin-top: 2%;
@@ -416,6 +420,10 @@ footer a{
             padding: 0vh;
             width: 80%;
             padding: 20px;
+        
+        }
+        .my-goal p{
+            font-size: 1.2em;
         }
         .find-me-heading{
             font-size: 2.2em;
@@ -443,6 +451,14 @@ footer a{
         nav a{
             margin-right: 1%;
             margin-left: auto;
+        }
+        
+        footer a{
+            color: white;
+            word-spacing: 4px;
+            text-decoration: none;
+            font-size: 0.8em;
+            padding: none;
         }
         
 
