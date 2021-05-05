@@ -25,21 +25,18 @@ a:hover[class="link"] {
     text-decoration: rgba(169, 216, 115, 0.659);
 }
 
-a:hover[class="nav"]{
-    color: rgb(104, 234, 251) !important; /*<--this is to override some existing stuff*/ 
-
-}
-
 /*Navigation Bar and dropdown button in it*/
 
 nav {
-    background-color: #3f52e3;
+    background-color: none;
     overflow: hidden;
     padding: none;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     margin-top: 0px;
     border-spacing: 0mm;
+
+
     
 }
 
@@ -48,10 +45,37 @@ nav a {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     text-decoration: none;
-    padding: 30px;
+    margin: 1em 1em;
+    margin-bottom: 2.5em !important;
+    padding: 10px;
     float: right;
     text-align: center;
+    border-radius: 30vh;
+    transform:scale(1.004);
 
+}
+
+nav a:hover, nav a:focus{
+    background-color: #ffffff;
+    color: #0c111b !important;
+    transition: transform 2s ease;
+    
+}
+
+.nav-bar-container{
+    display:flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items:center;
+    
+
+    /* border: 1px solid white; */
+}
+
+.nav-bar-container div{
+    margin: 0px 3em;
+    margin-bottom: 4em;
+    /* border: 1px solid white; */
 }
 
 .dropbtn{
@@ -93,14 +117,16 @@ body{
     flex-direction: row;
     justify-content: center;
     width: 100%;
+}
 
-
-
+.latest_videos div{
+    width: 100%;
+    border-radius: 10px;
 }
 
 .latest_videos iframe{
-    height: 300px;
-    border-radius: 10px;
+    height: 100%;
+    border-radius:10px;
     padding-left: 6vh;
     padding-right: 6vh;
     width: 100%;
@@ -166,18 +192,18 @@ body{
     -ms-transform: translateY(-5px);
     -webkit-transform: translateY(-5px);
 }
-img{
+.image{
     border-radius: 10%;
     height: 450px;
     display: block;
+    margin-bottom: 10vh;
     margin-left: 25%;
     margin-right: 100%;
-    padding-bottom: 20px;
     border:rgb(104, 99, 94);
     transition: transform 0.5s ease;
     
 }
-img:hover{
+.image:hover{
     transform: translateY(-5px);
     -webkit-transform: translateY(-5px);
     -ms-transform: translateY(-5px);
@@ -186,14 +212,21 @@ img:hover{
 
 /*About me container end*/
 
+
 /* Headings */
 
 .my-name{
+    color: white;
     font-family: 'Architects Daughter', cursive;
-    transition: width 5s;
+    font-size: 10vh;
+    /* transition: width 5s;
     transition-delay: 2s;
-    transition-duration: 3s;
+    transition-duration: 3s; */
+    z-index: 10;
+    margin-left:40px;
+    /* transform: translateX(-10px); */
 }
+
 .find-me-heading{
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
@@ -238,6 +271,10 @@ img:hover{
 
 /*Headings end*/
 
+/* Overlay text movement */
+
+
+
 .find-me-heading:hover{
     transform: translateY(-5px);
     -ms-transform: translateY(-5px);
@@ -267,14 +304,19 @@ img:hover{
     
 }
 
+/* Header in Navigation bar */
+
+header img{
+    border-radius: 100%;
+    width: 7em;
+    /* margin-bottom: 7em !important; */
+    /* border: 3px solid red; */
+}
+
 header{
-    font-size: 30px;
-    text-align: center;
-    background-color: rgb(18, 174, 246);
-    border-radius: 50px;
-    width: 50%;
-    margin: auto;  
-    transition: transform 0.5s ease; 
+    margin: 6vh 2vh;  
+    transition: transform 0.5s ease;
+    /* border: 1px solid white;  */
 }
 header:hover{
     opacity: 90%;
@@ -293,6 +335,8 @@ header span:hover::after{
     font-weight:1000;
     font-size: 30px;
 }
+
+/* Header in Nav bar ends */
 
 /*My goal content */
 .my-goal p{
@@ -355,7 +399,7 @@ footer a{
             margin: auto;  
             transition: transform 0.5s ease; 
         }
-        img{
+        .image{
             height: 300px;
             display: block;
             margin-left: auto;
@@ -447,10 +491,27 @@ footer a{
             display: flex;
             flex-direction: column-reverse;
             justify-content: right;
+            background-color: #3f52e3;
+
+            overflow: hidden;
+            padding: none;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            margin-top: 0px;
+            border-spacing: 0mm;
+            
         }
         nav a{
             margin-right: 1%;
             margin-left: auto;
+
+            font-size: 16px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 30px;
+            float: right;
+            text-align: center;
         }
         
         footer a{
