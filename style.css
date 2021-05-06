@@ -63,6 +63,7 @@ nav a:hover, nav a:focus{
 }
 
 .nav-bar-container{
+    overflow: hidden;
     display:flex;
     flex-direction: row;
     justify-content:space-between;
@@ -78,23 +79,48 @@ nav a:hover, nav a:focus{
     /* border: 1px solid white; */
 }
 
+/* The container <div> - needed to position the dropdown content */
+
+
 .dropbtn{
     background-color: #3f52e3;
     color: rgb(218, 246, 237);
     border:none;
+    border-radius: 5px;
     padding: 5px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     text-decoration: none;
     font-size: 16px;
     float:right;
+    /* border: 2px solid white; */
+    
+
 }
 
-/* The container <div> - needed to position the dropdown content */
 .dropdown {
     position: relative;
     display: inline-block;
+    margin-top: 100px;
+    border: 2px solid white;
   }
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+
+.dropdown-content a:hover{
+    background-color: ivory;
+}
+
+.dropdown:hover .dropdown-content{
+    display: table-column;
+    z-index: 100 !important;
+}
+
+
 
 /*Nav Bar ends*/
 
@@ -309,6 +335,8 @@ body{
 header img{
     border-radius: 100%;
     width: 7em;
+    background: none;
+
     /* margin-bottom: 7em !important; */
     /* border: 3px solid red; */
 }
@@ -316,6 +344,7 @@ header img{
 header{
     margin: 6vh 2vh;  
     transition: transform 0.5s ease;
+    background: none;
     /* border: 1px solid white;  */
 }
 header:hover{
@@ -348,6 +377,103 @@ header span:hover::after{
     color: rgb(0, 0, 0);
 
 }
+/* Card */
+
+.all-card-wrapper{
+    display: table;
+}
+
+.card-container{
+    position: relative;
+    /* flex-wrap: wrap; */
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    align-items: center;
+    
+    /* border: 1px solid white; */
+
+}
+
+.card-container .card{
+    position: relative;
+    width: 30%;
+    height: 70vh;
+    margin: 1em 0;
+    background: rgba(255, 255, 255, 0.431);
+    opacity: 100%;
+    border-radius: 0.75em;
+    /* z-index: 1; */
+    display: flex;
+    align-items: center;
+    /* border: 1px solid white; */
+    border-left: 2px solid white;
+    border-top: 2px solid white;
+    backdrop-filter: blur(5px);
+
+}
+
+.card-container .card .card-content{
+    text-align: center;
+    padding: 5em 0;
+    /* border: 1px solid white; */
+    transition:0.5s;
+    transform: translateY(50px);
+    opacity: 0;
+
+
+}
+
+.card-container .card:hover .card-content{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.card-container .card .card-content h2{
+    color: white;
+    position: absolute;
+    text-align: right;
+    font-size: 8em;
+    right: -10px;
+    top:-100px;
+    opacity: 0.25;
+    /* z-index: 0; */
+    pointer-events:none;
+    /* border: 1px solid white; */
+
+}
+
+.card-container .card .card-content h3{
+    text-align: center;
+    color: white;
+    font-size: 2.5em;
+    font-family: "Montserrat", sans-serif;
+    box-shadow: hsl(20 100% 100% / 0.75);
+    
+}
+
+.card-container .card .card-content p{
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    font-family: "Raleyway", sans-serif;
+    font-size: 1.3em;
+}
+
+.card-container .card .card-content a{
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    color:rgb(0, 0, 0);
+    background: white;
+    border-radius: 2em;
+}
+
+/* Card Styling ends */
+
+
 
 /*My goal content ends */
 
@@ -390,15 +516,65 @@ footer a{
 
 @media only screen and (max-width: 768px) {
 
+
+        /* Nav bar and header image in it */
         header{
-            font-size: 1em;
-            text-align: center;
-            background-color: rgb(18, 174, 246);
-            border-radius: 10vh;
+            border-radius: 100%;
             width: 80%;
             margin: auto;  
             transition: transform 0.5s ease; 
         }
+        nav{
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: right;
+            background-color: #3f52e3;
+
+            overflow: hidden;
+            padding: none;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            margin-top: 0px;
+            border-spacing: 0mm;
+            
+        }
+        nav a{
+            margin-right: 1%;
+            margin-left: auto;
+
+            font-size: 16px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 30px;
+            float: right;
+            text-align: center;
+        }
+
+        .nav-bar-container{
+            display:flex;
+            flex-direction: column;
+            align-items:center;
+
+            
+        
+            /* border: 1px solid white; */
+        }
+        
+        .nav-bar-container div{
+            margin: 1em 3em;
+            margin-bottom: 0 !important;
+            border: 1px solid white;
+            width: 100%;
+        }
+        .my-image-container{
+            height: 15vh !important;
+        }
+        
+        /* Nav bar and header image in it  ends*/
+
+        
+        
         .image{
             height: 300px;
             display: block;
@@ -467,7 +643,7 @@ footer a{
         
         }
         .my-goal p{
-            font-size: 1em;
+            font-size: 0.5em;
         }
         .find-me-heading{
             font-size: 2.2em;
@@ -487,32 +663,7 @@ footer a{
             padding-left: 2vh;
             padding-bottom: 2vh;
         }
-        nav{
-            display: flex;
-            flex-direction: column-reverse;
-            justify-content: right;
-            background-color: #3f52e3;
-
-            overflow: hidden;
-            padding: none;
-            border-bottom-left-radius: 5px;
-            border-bottom-right-radius: 5px;
-            margin-top: 0px;
-            border-spacing: 0mm;
-            
-        }
-        nav a{
-            margin-right: 1%;
-            margin-left: auto;
-
-            font-size: 16px;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            text-decoration: none;
-            padding: 30px;
-            float: right;
-            text-align: center;
-        }
+        
         
         footer a{
             color: white;
