@@ -248,7 +248,7 @@ body{
     /* transition: width 5s;
     transition-delay: 2s;
     transition-duration: 3s; */
-    z-index: 10;
+    z-index: 1;
     margin-left:40px;
     /* transform: translateX(-10px); */
 }
@@ -265,6 +265,7 @@ body{
     width: 40%;
     margin-left: auto;
     margin-right: auto;
+    pointer-events: none;
 }
 
 .my-goal h2{
@@ -279,6 +280,8 @@ body{
     padding: 20px;
     margin-left: auto;
     margin-right: auto;
+    pointer-events: none;
+
 }
 
 .latest-video-title{
@@ -293,6 +296,8 @@ body{
     width: 70%;
     margin-left: auto;
     margin-right: auto;
+    pointer-events: none;
+
 }
 
 /*Headings end*/
@@ -381,6 +386,7 @@ header span:hover::after{
 
 .all-card-wrapper{
     display: table;
+    margin: 50px 0;
 }
 
 .card-container{
@@ -525,11 +531,10 @@ footer a{
             transition: transform 0.5s ease; 
         }
         nav{
-            display: flex;
-            flex-direction: column-reverse;
+            display:list-item;
+            /* flex-direction: ; */
             justify-content: right;
             background-color: #3f52e3;
-
             overflow: hidden;
             padding: none;
             border-bottom-left-radius: 5px;
@@ -541,7 +546,6 @@ footer a{
         nav a{
             margin-right: 1%;
             margin-left: auto;
-
             font-size: 16px;
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
@@ -564,7 +568,7 @@ footer a{
         .nav-bar-container div{
             margin: 1em 3em;
             margin-bottom: 0 !important;
-            border: 1px solid white;
+            /* border: 1px solid white; */
             width: 100%;
         }
         .my-image-container{
@@ -603,7 +607,7 @@ footer a{
             height: 30vh;
         }
         .latest_videos{
-            height:360px;
+            height:40vh;
             display: inline-table;
             margin-bottom: 1vh;
             margin-top:1vh;
@@ -612,6 +616,7 @@ footer a{
         
         .latest_videos iframe{
             padding:0.5vh;
+            height: 60vh;
 
         }
         .background_video_container{
@@ -643,7 +648,7 @@ footer a{
         
         }
         .my-goal p{
-            font-size: 0.5em;
+            font-size: 1em;
         }
         .find-me-heading{
             font-size: 2.2em;
@@ -663,7 +668,89 @@ footer a{
             padding-left: 2vh;
             padding-bottom: 2vh;
         }
+
+        /* Card  */
+        .all-card-wrapper{
+            display: table;
+            margin: auto 0;
+        }
         
+        .card-container{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            max-width: 100%;
+            align-items: center;
+        }
+        .card-container .card{
+            position: relative;
+            width: 90%;
+            height: 70vh;
+            margin: 1em auto;
+            background: rgba(255, 255, 255, 0.431);
+            opacity: 100%;
+            border-radius: 0.75em;
+            /* z-index: 1; */
+            display: flex;
+            justify-content:centr;
+            align-items: center;
+            /* border: 1px solid white; */
+            border-left: 2px solid white;
+            border-top: 2px solid white;
+            backdrop-filter: blur(5px);
+        }
+        .card-container .card .card-content{
+            text-align: center;
+            padding: 5em 0;
+            /* border: 1px solid white; */
+            transition:0.5s;
+            transform: translateY(50px);
+            opacity: 0;        
+        }
+        .card-container .card:hover .card-content{
+            transform: translateY(0);
+            opacity: 1;
+        }     
+        .card-container .card .card-content h2{
+            color: white;
+            position: absolute;
+            text-align: right;
+            font-size: 8em;
+            right: 0.15em;
+            top:-0.4em;
+            opacity: 0.25;
+            /* z-index: 0; */
+            pointer-events:none;
+            /* border: 1px solid white; */
+        }
+        .card-container .card .card-content h3{
+            text-align: center;
+            color: white;
+            font-size: 2.3em;
+            top: 3em;
+            font-family: "Montserrat", sans-serif;
+            /* box-shadow: hsl(20 100% 100% / 0.75); */
+        }
+        .card-container .card .card-content p{
+            text-align: center;
+            width: 100%;
+            padding:0.25em;
+            font-family: "Raleyway", sans-serif;
+            font-size: 1.3em;
+        }
+        .card-container .card .card-content a{
+            text-decoration: none;
+            font-weight: bold;
+            position: relative;
+            display: inline-block;
+            padding: 10px;
+            color:rgb(0, 0, 0);
+            background: white;
+            border-radius: 2em;
+            bottom: 0.6em;
+        }
+        
+        /* Card Styling ends here */
         
         footer a{
             color: white;
