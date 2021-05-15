@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
+    
     <link rel="stylesheet" href="style.css">
     <!--Architects Daughter font-->
 <link rel="preconnect" href="https://fonts.gstatic.com">
+
 <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+
     <!--Playfair Display-->
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
@@ -17,6 +21,7 @@
     <!--Lato-->
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@500&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="Pictures/favicon.png" type="image/x-icon">
 
 
     <title>Contact</title>
@@ -24,52 +29,69 @@
 
 
 <body>
-    <Nav>
-        <a style="color: rgb(218, 246, 237);" class = "nav" href="contact.html">Contact</a>
-        <a style="color: rgb(218, 246, 237);" class = "nav" href="#">Book Recommendation</a>
-        <a style="color: rgb(218, 246, 237);" class = "nav" href="index.html">Home</a>
-
-    </Nav>
-
-    <h1 align = "center" class = "latest-video-title">YOU CAN CONTACT ME HERE</h1>
-        
-       <!-- <h3 align = "center"> <a href="home.html">Home</a></h3> -->
-
-       <div class="contact-images-parent-container">
-
-        <div class="contact-images-container">
-            <div style="margin-top:auto; margin-bottom:auto;">
-            <img align="center" class="contact-images" src="Pictures/email_white_24dp.svg" alt="Email">
-            </div>
     
-            <div style="margin-top:auto; margin-bottom:auto;">
-            <h4 class = "contact-content" align = "center" style="font-size:1.2em !important;">  - yamuprajapati05@gmail.com</h4>
+
+    <div class="contact">
+        <div class="contact-heading"><h1>Contact Me</h1></div>
+        <div class="contact-info-container">
+            <div class="contact-info">
+                <div class="box">
+                    <div class="icon"><img align="center"  src="Pictures/email_white_24dp.svg" alt="Email"></i>
+                    </div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>yamuprajapati05@gmail.com</p>
+                    </div>  
+                </div>
+                <div class="box">
+                    <div class="icon"><img src="Pictures/send_white_24dp.svg" alt="Instagram DM"></div>
+                    <div class="text">
+                        <h3>DM on Instagram</h3>
+                        <a href="https://www.instagram.com/yashasv_p">Click Here</a>
+                    </div>  
+                </div><div class="box">
+                    <div class="icon"><img src="Pictures/call_white_24dp.svg" alt="Mobile"></div>
+                    <div class="text">
+                        <h3>Mobile</h3>
+                        <p>(+91)8770182096</p>
+                    </div>  
+                </div>
             </div>
-    
+            <div class="contact-form">
+                <form class="gform pure-form pure-form-stacked" method="POST" action="https://script.google.com/macros/s/AKfycbxwxRWYdlhZ6RFlMBx1ylEmXzUyOuC9fPs1LpuhtgsbZQwsfvapYHYDM0Nw3PXhpdnw/exec">
+                    <h2>Send Message</h2>
+                    <div class="inputBox">
+                        <span>Name</span>
+                        <input name="name" type="text" required>
+                    </div>
+                    <div class="inputBox">
+                        <span>Email</span>
+                        <input name="email" type="email" required>
+                    </div>
+                    <div class="inputBox">
+                        <span>Your Message</span>
+                        <textarea name="message" id="msgbox" cols="30" rows="10" required></textarea>
+                    </div>
+                    <div class="inputBox send-btn">
+                        <input type="submit" value="Send" id="send-btn">
+                    </div>
+                    <fieldset class="pure-group honeypot-field">
+                        <label for="honeypot">To help avoid spam, utilize a Honeypot technique with a hidden text field; must be empty to submit the form! Otherwise, we assume the user is a spam bot.</label>
+                        <input id="honeypot" type="text" name="honeypot" value="" />
+                      </fieldset>
+                      <div class="thankyou_message" style="display:none;">
+                        <h2><em>Thanks</em> for contacting us!
+                          We will get back to you soon!</h2>
+                      </div>
+                </form>
+            </div>
         </div>
-    
-        <div class="contact-images-container">
-    
-            <div style="margin-top:auto; margin-bottom:auto;"><img class="contact-images" src="Pictures/send_white_24dp.svg" alt="Instagram DM"></div>
-    
-            <div style="margin-top:auto; margin-bottom:auto;"><h4 class = "contact-content" align = "center">(Instagram) -  <a href="https://www.instagram.com/yashasv_p" style="text-decoration: none; color: beige;" target="_blank"> yashasv_p </a></h4></div>
-            
-        </div>
-    
-        <div class="contact-images-container">
-            <div style="margin-top:auto; margin-bottom:auto;">
-                <img class="contact-images" src="Pictures/call_white_24dp.svg" alt="Mobile">
-            </div>
-    
-            <div style="margin-top:auto; margin-bottom:auto;">
-            <h4 class = "contact-content" align = "center" style="font-family:sans-serif;">  - 8770182096 [11AM to 3PM IST only]</h4>
-            </div>
-    
-        </div>
-
-       </div>
-    
+    </div>
     
     <hr>
+    
+    
+    <!-- <script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script> -->
+
 </body>
 </html>
