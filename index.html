@@ -30,19 +30,26 @@
 
 </head>
 <body>
+    <div class="overlay" id="overlay">
+        <div><img src="Pictures/GreWiz.png" alt="GreWiz"></div>
+        <div id="welcome"><h1>Hey There! Welcome</h1></div>
+        <div><button id = "overlay_close">Let's Go</button></div>
+        
+    </div>
+
+
     <Nav >
     <div class="nav-bar-container">
         <div style="height: 30vh;" class="my-image-container">
             <header>
-                <!-- <h1 class="my-name" id="my-name">GreWiz</h1> -->
-                <img src="Pictures/GreWiz.png" alt="GreWiz">
+                 <img src="Pictures/GreWiz.png" alt="GreWiz">
             </header>
         </div>
 
-        <div style="display: inline-block">
+        <div class="menu-container">
             <a style="color: rgb(218, 246, 237);" class = "nav" href="contact.html">Contact</a>
            
-            <a style="color: rgb(218, 246, 237);" class = "nav" href="#">Book Recommendation</a>
+            <a style="color: rgb(218, 246, 237);" class = "nav" href="#">Books</a>
             
             <a style="color: rgb(218, 246, 237);" class = "nav" href="index.html">Home</a>
 <!--  
@@ -247,10 +254,21 @@
 
 
 
-  
+  <script >
+      var overlayClose = document.getElementById("overlay_close");
 
+      overlayClose.addEventListener("click", overlayFunction);
 
+      function overlayFunction(){
+        //   document.getElementById("overlay").style.display = "none";
+          document.getElementById("overlay").style.transform = "translateY(-10000px)";
+          document.getElementById("overlay").style.transition = "all 3s";
+          document.getElementById("overlay").style.zIndex = "-9999";
+        //   document.getElementById("overlay").style.display = "none";
+      }
+  </script>
 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
 
 </body>
 </html>

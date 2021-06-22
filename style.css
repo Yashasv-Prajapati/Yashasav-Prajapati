@@ -20,6 +20,61 @@ html{
     box-sizing: border-box;
 }
 
+/* Overlay on Website */
+
+.overlay{
+    z-index: 9999;
+    position: absolute;
+    height: 100%;
+    width:100%;
+    background: rgba(0, 174, 255, 0.95); 
+    /* opacity: 0; */
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.overlay h1{
+    text-align: center;
+    font-size: 3em;
+}
+.overlay div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: 50%; */
+    /* border: 1px solid white; */
+}
+
+.overlay button{
+    font-size: 1.5em;
+    width: 50vw;
+    padding: 0.5em;
+    margin: 0.25em;
+    border-radius: 2em;
+}
+.overlay img{
+    width: 25vw;
+    border-radius: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Overlay on Website */
+
+
 a:hover[class="link"] {
     color:rgba(170, 8, 116, 0.713);
     text-decoration: rgba(169, 216, 115, 0.659);
@@ -339,7 +394,7 @@ body{
 
 header img{
     border-radius: 100%;
-    width: 7em;
+    width: 7em; 
     background: none;
 
     /* margin-bottom: 7em !important; */
@@ -525,15 +580,21 @@ footer a{
 
         /* Nav bar and header image in it */
         header{
-            border-radius: 100%;
-            width: 80%;
+            /* border-radius: 100%; */
             margin: auto;  
-            transition: transform 0.5s ease; 
+            /* transition: transform 0.5s ease;  */
+            /* border: 1px solid white; */
+
+        }
+        header img{
+            width: 0;
+            height: 0;
+            padding: 0.5em;
+
         }
         nav{
-            display:list-item;
-            /* flex-direction: ; */
-            justify-content: right;
+            display:flex;
+            flex-direction: column;
             background-color: #3f52e3;
             overflow: hidden;
             padding: none;
@@ -541,38 +602,49 @@ footer a{
             border-bottom-right-radius: 5px;
             margin-top: 0px;
             border-spacing: 0mm;
+            /* border: 1px solid white; */
             
         }
         nav a{
-            margin-right: 1%;
-            margin-left: auto;
-            font-size: 16px;
+            /* margin-right: 1%; */
+            /* margin-left: auto; */
+            display: flex;
+            flex-direction: column;
+            font-size: 0.8em;
+            width: 25%;
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
             text-decoration: none;
-            padding: 30px;
-            float: right;
+            padding-left: 8px;
+            padding-right: 8px;
+            /* float: right; */
             text-align: center;
+            border: 1px solid white;
+            margin-top:5vh;
+        }
+        .menu-container{
+            height: auto !important;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            align-items: center;
         }
 
         .nav-bar-container{
             display:flex;
             flex-direction: column;
             align-items:center;
-
-            
-        
-            /* border: 1px solid white; */
+            /* border: 1px solid red; */
         }
         
         .nav-bar-container div{
-            margin: 1em 3em;
             margin-bottom: 0 !important;
             /* border: 1px solid white; */
             width: 100%;
         }
         .my-image-container{
-            height: 15vh !important;
+            height: 0 !important;
+            width: 0;
         }
         
         /* Nav bar and header image in it  ends*/
