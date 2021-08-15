@@ -30,6 +30,7 @@
 
 </head>
 <body>
+    <!-- 
     <div class="overlay" id="overlay">
         <div><img src="Pictures/GreWiz.png" alt="GreWiz"></div>
         <div id="welcome"><h1>Hey There! Welcome</h1></div>
@@ -37,9 +38,13 @@
         
     </div>
 
+    <div class="name" id="name">
+        <h1>Yashasv Prajapati</h1>
+    </div>
+ -->
 
-    <Nav >
-    <div class="nav-bar-container">
+    <Nav style="background-color: #F85338;">
+    <div class="nav-bar-container" >
         <div style="height: 30vh;" class="my-image-container">
             <header>
                  <img src="Pictures/GreWiz.png" alt="GreWiz">
@@ -76,27 +81,30 @@
     </Nav>
     
     <main>
-        <section>
+        <section id = "about-me-section"style="background-color: #F85338;">
                 <!-- <h1 class="my-name" onload="scroll()" > GreWiz</h1>     -->
         <div class="about-me-container">
             <div><img class ="image withgradient" src="Pictures/yash.svg" alt="This is Yashasav Prajapati's image."></div>
-        
-            <div class="quote"><p>“Nobody ever figures out what life is all about, and it doesn't matter. Explore the world. Nearly everything is really interesting if you go into it deeply enough.”<br> 
-             &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ― Richard P. Feynman </p></div>
-        </div>
-        </section>
 
+            <div class="arrow"><img src="Pictures/arrow.svg" alt="Arrow pointing towards the image"></div>
+
+            
+        </div>
+        
+        <div class="quote"><p align="center">“Nobody ever figures out what life is all about, and it doesn't matter. Explore the world. Nearly everything is really interesting if you go into it deeply enough.”<br> 
+            &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ― Richard P. Feynman </p></div>
+        </section>
+<!-- 
         <section>
 
-            <!-- The video -->
             <div class="background_video_container">
                 <iframe src="http://www.youtube.com/embed/mqWUW6ypo6w?&autoplay=1&loop=1&controls=0&mute=1&playlist=mqWUW6ypo6w" frameborder="0" allow="autoplay"></iframe>
             </div>
 
-        </section>
+        </section> -->
         <section>
 
-            <h2 class="latest-video-title" align="center">SOME OF MY LATEST VIDEOS</h2>
+            <h2 class="latest-video-title" align="center">Some of my YouTube videos you might like</h2>
             <div class = "latest_videos">
                 <div><iframe src="https://www.youtube.com/embed/HxV9dnh9j5I" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; muted; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
@@ -109,13 +117,16 @@
 
         </section>
 
-        <section>
+        <section id="my-goal-section" style="background-color: white;">
         <div class="my-goal">
         <div>
-            <h2 align="center">MY GOAL</h2>
+            <h2 align="center">What am I trying to do?</h2>
         </div>
         <div><p align="center">
-            I am passionate about building cool stuff and making stuff that can bring a difference and change lives, but to create something useful I need to have an idea on which I can work upon and create effective products/services to improve and work upon the idea. So, I am still in search of a good idea on which I can work upon and I am hoping I'll soon get to that idea.
+            I am passionate about building something that can bring a difference and change lives, but to create something useful I need to have an idea on which I can work upon and create effective products/services to improve and work upon the idea. I am stil searching for a good idea or an inspiration to which I can channel all my energy and brain and build something really useful. I know it will take time and a lot of failures to reach the final finished product, but hey, Isn't that in which all the fun lies?
+            <br> 
+            I mean FAILING, IMPROVING, LEARNING, ENJOYING and REBUILDING!
+            <br><b>I present to you - FILER</b>
         </p></div>
         </div>
         </section>
@@ -140,7 +151,8 @@
         </section>
 -->
 
-        <section>
+        <section id="achievements-card-section" style="background-color: #47C19B;">
+            <h1 class="find-me-heading" align = "center">Have I achieved anything?</h1>
             <div class="all-card-wrapper">
 
                 <div class="card-container">
@@ -211,7 +223,7 @@
 -->
 
 
-        <section class="section">
+        <section class="section" style="background: #373573;">
             <h2 class="find-me-heading" align="center">FIND ME HERE</h2>
         <div class="find-me-image-container">
             <div><a class = "link" href="https://www.instagram.com/yashasv_p" target="_blank">
@@ -255,16 +267,25 @@
 
 
   <script >
-      var overlayClose = document.getElementById("overlay_close");
-
-      overlayClose.addEventListener("click", overlayFunction);
-
+      var overlayClose = document.getElementById("overlay_close")overlayClose.addEventListener("click", overlayFunction);
+      
       function overlayFunction(){
         //   document.getElementById("overlay").style.display = "none";
           document.getElementById("overlay").style.transform = "translateY(-10000px)";
           document.getElementById("overlay").style.transition = "all 3s";
           document.getElementById("overlay").style.zIndex = "-9999";
         //   document.getElementById("overlay").style.display = "none";
+          document.getElementById("name").style.transform = "translateX(-45vw)";
+          document.getElementById("name").style.transition = "all 1s";
+        
+        var popup_remove = document.getElementById("name");
+        popupRemove.addEventListener("scroll", popupRemove);
+
+        function popupRemove(){
+            document.getElementById("name").style.transform = "translateX(45vw)";
+            document.getElementById("name").style.transition = "all 1s";
+            document.getElementById("name").style.zIndex = "-9999";
+        }
       }
   </script>
 

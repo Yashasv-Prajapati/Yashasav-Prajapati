@@ -1,7 +1,10 @@
 /* Font Families */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@530&family=Raleway:wght@325&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@541&display=swap');
+
 
 /* CSS */
 
@@ -21,14 +24,14 @@ html{
 }
 
 /* Overlay on Website */
-
+/* 
 .overlay{
     z-index: 9999;
     position: absolute;
     height: 100%;
     width:100%;
     background: rgba(0, 174, 255, 0.95); 
-    /* opacity: 0; */
+    opacity: 0;   (cut this out when using) 
     border: 1px solid white;
     display: flex;
     flex-direction: column;
@@ -46,8 +49,8 @@ html{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    /* margin-top: 50%; */
-    /* border: 1px solid white; */
+    margin-top: 50%;  (cut this out when using) 
+    border: 1px solid white;  (cut this out when using) 
 }
 
 .overlay button{
@@ -60,19 +63,35 @@ html{
 .overlay img{
     width: 25vw;
     border-radius: 100%;
-}
-
-
-
-
-
-
-
-
-
+} */
 
 
 /* Overlay on Website */
+
+/* My name popup */
+
+.name{
+    position:absolute;
+    background: rgba(255, 255, 255, 0.582);
+    z-index: 999;
+    width: 40vw;
+    top: 20vh;
+    left:100vw;
+    border-radius: 0.5em;
+    /* pointer-events: none; */
+    backdrop-filter: blur(5px);
+
+}
+
+.name h1{
+    font-family: "Raleway",sans-serif;
+    font-size: 3em;
+    color:black;
+    padding: 0 1em; 
+    
+}
+
+/* My name popup */
 
 
 a:hover[class="link"] {
@@ -186,7 +205,7 @@ body{
     max-width: 100%;
     max-height: 100%;
     overflow-x: hidden;
-    background-color: #0c111b;
+    background-color: #ffffff;
     margin:0px;
     padding:0px;
 
@@ -213,10 +232,21 @@ body{
     width: 100%;
 
 }
-
+/* Find Me Section */
 .section{
     text-align: center;
 }
+
+.section::before{
+    content: "";
+    display: block;
+    height: 3em;
+    width:100%;
+    z-index: 1000;
+    bottom: 0;
+    background:linear-gradient(to top, #373573, transparent) ;
+}
+
 
 .background_video_container{
     position: relative;
@@ -239,33 +269,57 @@ body{
 }
 */
 
+/* About me section */
+
+#about-me-section::after{
+    content: "";
+    /* position:absolute; */
+    display: block;
+    bottom:0; 
+    background:linear-gradient(to top, white, #F85338, transparent);
+    width: 100%;
+    height: 100px;
+    z-index: 1000;
+    /* border: 10px solid black; */
+}
+
+
 /* About me container */
 
 .about-me-container{
     width: 100%;
     display: flex;
     flex-direction: row;
-    padding: 30px;
+    /* padding: 15px; */
 }
 
 .about-me-container p{
     margin: auto;
     
 }
+
+.arrow img{
+    width: 35em;
+    height: auto;
+    /* border: 1px solid white; */
+}
+
 .quote{
     margin-top: 6%;
     width: 50%;
     height: auto;
-    padding:60px;
+    /* padding:60px; */
     transition: transform 0.5s ease;
-    border-color: cadetblue;
-    margin-left: 10%;
+    border-color: white;
+    margin-left:auto;
+    margin-right: auto;
+    
 }
 .quote p{
-    font-family: 'Playfair Display', serif;
+    font-family: 'Work Sans', sans-serif;
     font-weight: 800;
-    font-size: 20px;
-    color: aquamarine;
+    font-size: 1em;
+    color: white;
 }
 .quote:hover{
     transform: translateY(-5px);
@@ -282,6 +336,7 @@ body{
     margin-right: 100%;
     border:rgb(104, 99, 94);
     transition: transform 0.5s ease;
+    pointer-events: none;
     
 }
 .image:hover{
@@ -309,24 +364,23 @@ body{
 }
 
 .find-me-heading{
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700;
+    font-family: 'Quicksand', sans-serif;
     transition: transform 0.5s ease;
-    font-size: 50px;
+    font-size: 2.4em;
     padding: 20px;
-    color: #203d67;
-    background-color: #fafafa;
-    border-radius: 10px;
-    width: 40%;
+    color: #ffffff;
+    background-color: none;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
     pointer-events: none;
+    margin-top: -30px;
+    /* border: 1px solid black; */
 }
 
 .my-goal h2{
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700;
-    font-size: 50px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2.4em;
     transition: transform 0.5s ease;
     color: #203d67;
     background-color: #fafafa;
@@ -340,15 +394,14 @@ body{
 }
 
 .latest-video-title{
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700;
-    font-size: 50px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2.3em;
     transition: transform 0.5s ease;
     padding: 30px;
     color: #203d67;
     background-color: #fafafa;
     border-radius: 10px;
-    width: 70%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
     pointer-events: none;
@@ -427,17 +480,64 @@ header span:hover::after{
 
 /* Header in Nav bar ends */
 
+/* My Goal color transition */
+
+#my-goal-section::before{
+    content: "";
+    display: block;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, white transparent);
+    z-index: 1000;
+}
+
+#my-goal-section::after{
+    content: "";
+    display: block;
+    bottom: 0;
+    width: 100%;
+    height: 3em;
+    background: linear-gradient(to bottom,white, transparent);
+    z-index: 1000;
+}
+
+
 /*My goal content */
 .my-goal p{
     font-family: 'Montserrat', sans-serif;
     font-size: 1.6em;
-    background-image: linear-gradient(rgb(120, 255, 248), rgb(143, 158, 253));
+    /* background-image: linear-gradient(rgb(120, 255, 248), rgb(143, 158, 253)); */
     padding: 20px;
     border-radius: 20px;
-    color: rgb(0, 0, 0);
+    color: #000a47;
+    /* padding-bottom:50px; */
 
 }
+
 /* Card */
+
+#achievements-card-section::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    /* background: linear-gradient(to bottom, #white, #47C19B, transparent); */
+    z-index: 1000;
+}
+
+#achievements-card-section::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3em;
+    bottom: 0;
+    background:#373573;
+    z-index: 1000;
+}
+
+
 
 .all-card-wrapper{
     display: table;
@@ -459,7 +559,7 @@ header span:hover::after{
 .card-container .card{
     position: relative;
     width: 30%;
-    height: 70vh;
+    height: 85vh;
     margin: 1em 0;
     background: rgba(255, 255, 255, 0.431);
     opacity: 100%;
@@ -556,12 +656,12 @@ header span:hover::after{
 
 
 footer{
-    background-color: black;
+    background-color: #020A21;
     padding: 4vh;
     height:auto;
     width: auto;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: 1px;
+    border-top-right-radius: 1px;
     display: flex;
     flex-direction: column;
 }
@@ -655,7 +755,7 @@ footer a{
             height: 300px;
             display: block;
             margin-left: auto;
-            margin-right:auto;
+            /* margin-right:auto; */
             padding-bottom: 20px;
            
         }
@@ -671,10 +771,10 @@ footer a{
             margin-right:auto;
         }
         .quote p{
-            font-family: 'Playfair Display', serif;
+            font-family: 'Word Sans', sans-serif;
             font-weight: 800;
             font-size: 1.1em;
-            color: aquamarine;
+            color: white;
             width: 100%;
             height: 30vh;
         }
@@ -702,7 +802,7 @@ footer a{
         .about-me-container{
             width: 100%;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             padding: 30px;
         }
 
@@ -1051,7 +1151,9 @@ footer a{
     
 
 }
+
 @media only screen and (max-width: 515px){
+    
     .box{
         display:flex;
         flex-direction: column;
@@ -1061,9 +1163,11 @@ footer a{
         width: 100vw;
 
     }
+    
     .contact{
         padding: 1em 1em;
     }
+    
     .contact-info-container{
         position: relative;
         display: flex;
@@ -1095,3 +1199,34 @@ footer a{
     }
 }
 /* Contact page ends */
+
+
+
+
+@media only screen and (max-width: 984px) {
+    .arrow img{
+        width: 15em;
+        height: auto;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .arrow img{
+        width: 10em;
+        height: auto;
+    }
+
+
+}
+@media screen and (max-width: 473px){
+    .arrow img{
+        width: 0;
+        height: 0;
+    }
+
+    .image{
+        margin-right: auto;
+        margin-left:auto;
+    }
+}
